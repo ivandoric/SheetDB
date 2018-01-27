@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sheet DB</title>
+</head>
+<body>
+
+    <div id="root">
+        <ul>
+            <li v-for="person in people.data">
+                {{person.first_name}} {{person.last_name}} - ({{ person.id }})
+                <button v-on:click="deletePerson(person)">Delete</button>
+            </li>
+        </ul>
+
+        <input type="text" name="" v-model="firstName">
+        <input type="text" name="" v-model="lastName">
+        <button v-on:click="addPerson">Add Person</button>
+
+    </div>
+
+    <script type="text/javascript" src="dist/app.js"></script>
+</body>
+</html>
